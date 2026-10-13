@@ -35,20 +35,31 @@
         input[type="radio"] {
             margin-right: 10px;
         }
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
         button {
-            display: block;
-            width: 100%;
+            flex: 1;
             padding: 12px;
-            background-color: #3498db;
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            margin-top: 20px;
         }
-        button:hover {
-            background-color: #2980b9;
+        .btn-submit {
+            background-color: #27ae60;
+        }
+        .btn-submit:hover {
+            background-color: #219653;
+        }
+        .btn-reset {
+            background-color: #e74c3c;
+        }
+        .btn-reset:hover {
+            background-color: #c0392b;
         }
     </style>
 </head>
@@ -56,7 +67,7 @@
 
     <h1>Qüestionari de Seguretat Informàtica</h1>
 
-    <form>
+    <form id="quizForm">
         <!-- Pregunta 1 -->
         <div class="question">
             <p><strong>1. Per què cal protegir la informació en un sistema informàtic?</strong></p>
@@ -176,69 +187,4 @@
 
         <!-- Pregunta 14 -->
         <div class="question">
-            <p><strong>14. Què és una vulnerabilitat?</strong></p>
-            <label><input type="radio" name="q14" value="a"> a) Un programa maliciós que ataca el sistema</label>
-            <label><input type="radio" name="q14" value="b"> b) Una debilitat o error en el sistema que pot ser explotat per una amenaça</label>
-            <label><input type="radio" name="q14" value="c"> c) Un atac que ja s'ha produït</label>
-            <label><input type="radio" name="q14" value="d"> d) Una eina per protegir el sistema</label>
-        </div>
-
-        <!-- Pregunta 15 -->
-        <div class="question">
-            <p><strong>15. Què és un exploit?</strong></p>
-            <label><input type="radio" name="q15" value="a"> a) Un tipus de contrasenya molt segura</label>
-            <label><input type="radio" name="q15" value="b"> b) Una tècnica, codi o eina que aprofita una vulnerabilitat per comprometre el sistema</label>
-            <label><input type="radio" name="q15" value="c"> c) Un mètode de xifrat de dades</label>
-            <label><input type="radio" name="q15" value="d"> d) Un protocol de comunicació segura</label>
-        </div>
-
-        <!-- Pregunta 16 -->
-        <div class="question">
-            <p><strong>16. Quin d'aquests és un tipus de malware?</strong></p>
-            <label><input type="radio" name="q16" value="a"> a) Tallafocs (firewall)</label>
-            <label><input type="radio" name="q16" value="b"> b) Xifrat AES</label>
-            <label><input type="radio" name="q16" value="c"> c) Troià (trojan)</label>
-            <label><input type="radio" name="q16" value="d"> d) VPN</label>
-        </div>
-
-        <!-- Pregunta 17 -->
-        <div class="question">
-            <p><strong>17. Un atac de "phishing" consisteix principalment a:</strong></p>
-            <label><input type="radio" name="q17" value="a"> a) Enviar moltes peticions per saturar un servidor</label>
-            <label><input type="radio" name="q17" value="b"> b) Enganyar l'usuari perquè revele informació confidencial fent-se passar per una entitat de confiança</label>
-            <label><input type="radio" name="q17" value="c"> c) Xifrar les dades de la víctima i demanar un rescat</label>
-            <label><input type="radio" name="q17" value="d"> d) Escanejar ports oberts d'una xarxa</label>
-        </div>
-
-        <!-- Pregunta 18 -->
-        <div class="question">
-            <p><strong>18. Quin és l'objectiu principal del Reglament General de Protecció de Dades (RGPD)?</strong></p>
-            <label><input type="radio" name="q18" value="a"> a) Regular l'ús de programari lliure a les empreses</label>
-            <label><input type="radio" name="q18" value="b"> b) Protegir les persones físiques pel que fa al tractament de les seves dades personals</label>
-            <label><input type="radio" name="q18" value="c"> c) Establir les normes tècniques dels sistemes operatius</label>
-            <label><input type="radio" name="q18" value="d"> d) Regular únicament les transaccions comercials electròniques</label>
-        </div>
-
-        <!-- Pregunta 19 -->
-        <div class="question">
-            <p><strong>19. En el context de l'Administració electrònica, què cal garantir principalment?</strong></p>
-            <label><input type="radio" name="q19" value="a"> a) Que tots els tràmits es facen presencialment</label>
-            <label><input type="radio" name="q19" value="b"> b) La identitat dels ciutadans i la integritat i confidencialitat de les seues dades en els tràmits telemàtics</label>
-            <label><input type="radio" name="q19" value="c"> c) Que els tràmits només es puguen fer amb contrasenya simple</label>
-            <label><input type="radio" name="q19" value="d"> d) Que no es guarde cap registre dels tràmits realitzats</label>
-        </div>
-
-        <!-- Pregunta 20 -->
-        <div class="question">
-            <p><strong>20. Quina afirmació sobre els tipus d'atacs és correcta?</strong></p>
-            <label><input type="radio" name="q20" value="a"> a) Els atacs passius només modifiquen la informació sense llegir-la</label>
-            <label><input type="radio" name="q20" value="b"> b) Els atacs actius busquen modificar, interrompre o destruir recursos, mentre que els passius solen interceptar o escoltar informació sense alterar-la</label>
-            <label><input type="radio" name="q20" value="c"> c) Tots els atacs són sempre actius</label>
-            <label><input type="radio" name="q20" value="d"> d) Els atacs passius sempre deixen traces evidents al sistema</label>
-        </div>
-
-        <button type="submit">Enviar respostes</button>
-    </form>
-
-</body>
-</html>
+            <p><strong>14.
